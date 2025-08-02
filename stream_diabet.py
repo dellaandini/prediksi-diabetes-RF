@@ -98,7 +98,7 @@ with col1:
             }
 
             # Validasi nilai nol (kecuali insulin dan ketebalan kulit)
-            invalid = [k for k, v in input_data.items() if v == 0 and k not in ['Insulin', 'SkinThickness']]
+            invalid = [k for k, v in input_data.items() if v == 0 and k not in ['Insulin', 'SkinThickness', 'Pregnancies']]
             if invalid:
                 st.warning(f"Beberapa nilai penting tidak boleh nol: {', '.join(invalid)}. Silakan periksa kembali.")
             else:
@@ -214,3 +214,4 @@ with col2:
 
 # Footer
 st.caption("📌 Aplikasi ini menggunakan model Random Forest terlatih berdasarkan *Pima Indian Diabetes Dataset*.")
+
